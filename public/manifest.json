@@ -1,0 +1,22 @@
+{
+  "name": "AI Task Manager",
+  "short_name": "AI Tasks",
+  "description": "Professional AI-powered task management application",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1a1a1a",
+  "background_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business", "utilities"],
+  "lang": "uk",
+  "dir": "ltr"
+}
