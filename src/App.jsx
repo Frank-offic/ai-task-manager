@@ -101,6 +101,7 @@ function App() {
 
   const filteredTasks = tasks.filter(task => task.projectId === selectedProjectId);
   const selectedTask = tasks.find(task => task.id === selectedTaskId);
+  const selectedProject = projects.find(project => project.id === selectedProjectId);
 
   return (
     <div className="min-h-screen bg-background flex">
