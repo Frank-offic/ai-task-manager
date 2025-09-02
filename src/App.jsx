@@ -17,6 +17,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import OfflineIndicator from './components/OfflineIndicator';
 import { KanbanSkeleton, CalendarSkeleton } from './components/SkeletonLoaders';
 import { useToast } from './components/Toast';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   const {
@@ -102,14 +103,21 @@ function App() {
   const selectedTask = tasks.find(task => task.id === selectedTaskId);
 
   return (
-    <div className="min-h-screen bg-gray-900 flex">
+    <div className="min-h-screen bg-background flex">
       <ProjectSidebar />
       <main className="flex-1 p-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold text-white mb-2">🚀 AI Task Manager</h1>
-            <p className="text-gray-400">Керуйте завданнями з допомогою ШІ</p>
+          <div className="flex justify-between items-center mb-8">
+            <div>
+              <h1 className="text-3xl font-bold text-foreground mb-2">
+                {selectedProject ? selectedProject.name : 'Всі завдання'}
+              </h1>
+              <p className="text-muted-foreground">
+                {filteredTasks.length} завдань
+              </p>
+            </div>
+            <ThemeToggle />
           </div>
 
           {/* AI Assistant */}
